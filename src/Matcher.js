@@ -1,16 +1,16 @@
 import Match from './Match';
 
 class Matcher {
-  constructor(pattern, type = 'text') {
-    this.pattern = pattern;
+  constructor(type, pattern) {
     this.type = type;
+    this.pattern = pattern;
   }
 
   match(input) {
-    const expression = new RegExp(this.pattern, 'g');
+    const expression = new RegExp(this.pattern);
     let found = expression.exec(input);
     if (found) {
-      return new Match(found, this.type);
+      return new Match(this.type, found);
     }
   }
 }

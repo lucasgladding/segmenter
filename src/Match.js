@@ -1,10 +1,12 @@
 class Match {
-  constructor(match, type) {
-    const string = match[0];
-
-    this.string = string;
+  constructor(type, match) {
     this.type = type;
-    this.range = [match.index, match.index + string.length];
+    this.match = match[0];
+    this.index = match.index;
+  }
+
+  last() {
+    return this.index + this.match.length;
   }
 }
 
