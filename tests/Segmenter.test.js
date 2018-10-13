@@ -12,9 +12,9 @@ describe('Segmenter', () => {
     expect(segments).toBeInstanceOf(Array);
     expect(segments.length).toEqual(3);
 
-    expect(segments[0]).toEqual('input with ');
-    expect(segments[1]).toEqual('@user');
-    expect(segments[2]).toEqual(' and more');
+    expect(segments[0].segment).toEqual('input with ');
+    expect(segments[1].segment).toEqual('@user');
+    expect(segments[2].segment).toEqual(' and more');
   });
 
   it('should segment input with more than one user', () => {
@@ -26,11 +26,11 @@ describe('Segmenter', () => {
     expect(segments).toBeInstanceOf(Array);
     expect(segments.length).toEqual(5);
 
-    expect(segments[0]).toEqual('input with ');
-    expect(segments[1]).toEqual('@user');
-    expect(segments[2]).toEqual(' and ');
-    expect(segments[3]).toEqual('@user');
-    expect(segments[4]).toEqual(' and more');
+    expect(segments[0].segment).toEqual('input with ');
+    expect(segments[1].segment).toEqual('@user');
+    expect(segments[2].segment).toEqual(' and ');
+    expect(segments[3].segment).toEqual('@user');
+    expect(segments[4].segment).toEqual(' and more');
   });
 
   it('should segment input starting with match', () => {
@@ -42,8 +42,8 @@ describe('Segmenter', () => {
     expect(segments).toBeInstanceOf(Array);
     expect(segments.length).toEqual(2);
 
-    expect(segments[0]).toEqual('@user');
-    expect(segments[1]).toEqual(' and more');
+    expect(segments[0].segment).toEqual('@user');
+    expect(segments[1].segment).toEqual(' and more');
   });
 
   it('should segment input ending with match', () => {
@@ -55,8 +55,8 @@ describe('Segmenter', () => {
     expect(segments).toBeInstanceOf(Array);
     expect(segments.length).toEqual(2);
 
-    expect(segments[0]).toEqual('input with ');
-    expect(segments[1]).toEqual('@user');
+    expect(segments[0].segment).toEqual('input with ');
+    expect(segments[1].segment).toEqual('@user');
   });
 
   it('should segment input without match', () => {
@@ -68,6 +68,6 @@ describe('Segmenter', () => {
     expect(segments).toBeInstanceOf(Array);
     expect(segments.length).toEqual(1);
 
-    expect(segments[0]).toEqual('input without match');
+    expect(segments[0].segment).toEqual('input without match');
   });
 });

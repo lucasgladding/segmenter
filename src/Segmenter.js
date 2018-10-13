@@ -16,11 +16,14 @@ class Segmenter {
     const match = this.match(input);
     if (match) {
       const l = input.slice(0, match.first);
-      const m = match.match;
       const r = input.slice(match.last);
-      return [...this.segment(l), m, ...this.segment(r)];
+      return [
+        ...this.segment(l), 
+        new Segment(match.type, match.match),
+        ...this.segment(r),
+      ];
     }
-    return [input];
+    return [new Segment(null, input)];
   }
   
   match(input) {
