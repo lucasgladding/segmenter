@@ -16,9 +16,6 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.0.0"
-  },
   "jest": {
     "transform": {
       "^.+\\.js?$": "babel-jest"
