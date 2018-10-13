@@ -10,6 +10,7 @@ describe('Matcher', () => {
     expect(match).toBeInstanceOf(Match);
     expect(match.type).toEqual('mention');
     expect(match.match).toEqual('@user');
-    expect(match.index).toEqual(18);
+    expect(match.first).toEqual(18);
+    expect(match.last).toEqual(23);
   });
 });

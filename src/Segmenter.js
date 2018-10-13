@@ -12,11 +12,12 @@ class Segmenter {
   segment(input) {
     const match = this.match(input);
     if (match) {
-      const l = input.slice(0, match.index);
+      const l = input.slice(0, match.first);
       const m = match.match;
-      const r = input.slice(match.last());
-      return [l, m, r];
+      const r = input.slice(match.last);
+      return [...this.segment(l), m, ...this.segment(r)];
     }
+    return [input];
   }
   
   match(input) {
