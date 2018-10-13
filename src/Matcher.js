@@ -6,15 +6,12 @@ class Matcher {
     this.type = type;
   }
 
-  find(input) {
-    const matches = [];
+  match(input) {
     const expression = new RegExp(this.pattern, 'g');
-    let data;
-    while ((data = expression.exec(input)) !== null) {
-      const match = new Match(data, this.type);
-      matches.push(match);
+    let found = expression.exec(input);
+    if (found) {
+      return new Match(found, this.type);
     }
-    return matches;
   }
 }
 
