@@ -10,6 +10,9 @@ class Segmenter {
   }
 
   segment(input) {
+    if (!input) {
+      return [];
+    }
     const match = this.match(input);
     if (match) {
       const l = input.slice(0, match.first);
