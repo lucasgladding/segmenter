@@ -1,5 +1,5 @@
 {
-  "name": "parser",
+  "name": "segmenter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Lucas Gladding",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
