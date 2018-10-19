@@ -1,9 +1,9 @@
-import Matcher from '../src/Matcher';
 import Match from '../src/Match';
+import PatternMatcher from '../src/PatternMatcher';
 
-describe('Matcher', () => {
+describe('ExpressionMatcher', () => {
   it('should match string containing @user', () => {
-    const matcher = new Matcher('mention', /@\w+/);
+    const matcher = new PatternMatcher('mention', /@\w+/);
     
     const match = matcher.match('string containing @user');
 

@@ -1,6 +1,6 @@
 import Match from './Match';
 
-class Matcher {
+class PatternMatcher {
   constructor(type, pattern) {
     this.type = type;
     this.pattern = pattern;
@@ -15,4 +15,4 @@ class Matcher {
   }
 }
 
-export default Matcher;
+export default PatternMatcher;

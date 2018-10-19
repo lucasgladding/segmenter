@@ -1,11 +1,11 @@
-import Matcher from '../src/Matcher';
+import PatternMatcher from '../src/PatternMatcher';
 import Segment from '../src/Segment';
 import Segmenter from '../src/Segmenter';
 
 describe('Segmenter', () => {
   it('should segment input with user', () => {
     const segmenter = new Segmenter();
-    segmenter.register(new Matcher('mention', /@\w+/));
+    segmenter.register(new PatternMatcher('mention', /@\w+/));
     
     const segments = segmenter.segment('input with @user and more');
 
@@ -19,7 +19,7 @@ describe('Segmenter', () => {
 
   it('should segment input with more than one user', () => {
     const segmenter = new Segmenter();
-    segmenter.register(new Matcher('mention', /@\w+/));
+    segmenter.register(new PatternMatcher('mention', /@\w+/));
     
     const segments = segmenter.segment('input with @user and @user and more');
 
@@ -35,7 +35,7 @@ describe('Segmenter', () => {
 
   it('should segment input starting with match', () => {
     const segmenter = new Segmenter();
-    segmenter.register(new Matcher('mention', /@\w+/));
+    segmenter.register(new PatternMatcher('mention', /@\w+/));
     
     const segments = segmenter.segment('@user and more');
 
@@ -48,7 +48,7 @@ describe('Segmenter', () => {
 
   it('should segment input ending with match', () => {
     const segmenter = new Segmenter();
-    segmenter.register(new Matcher('mention', /@\w+/));
+    segmenter.register(new PatternMatcher('mention', /@\w+/));
     
     const segments = segmenter.segment('input with @user');
 
@@ -61,7 +61,7 @@ describe('Segmenter', () => {
 
   it('should segment input without match', () => {
     const segmenter = new Segmenter();
-    segmenter.register(new Matcher('mention', /@\w+/));
+    segmenter.register(new PatternMatcher('mention', /@\w+/));
     
     const segments = segmenter.segment('input without match');
 
