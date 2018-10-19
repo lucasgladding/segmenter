@@ -1,3 +1,3 @@
 # Segmenter
 
-Segments strings based on registered expressions.
+Segments strings using matchers.

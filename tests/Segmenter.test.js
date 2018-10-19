@@ -1,7 +1,4 @@
-import PatternMatcher from '../src/PatternMatcher';
-import Segment from '../src/Segment';
-import Segmenter from '../src/Segmenter';
-import StringMatcher from '../src/StringMatcher';
+import { PatternMatcher, Segment, Segmenter, StringMatcher } from '../src';
 
 describe('Segmenter with pattern matcher', () => {
   it('should segment input with user', () => {

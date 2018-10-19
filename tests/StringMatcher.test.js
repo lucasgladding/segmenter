@@ -1,5 +1,4 @@
-import Match from '../src/Match';
-import StringMatcher from '../src/StringMatcher';
+import { Match, StringMatcher } from '../src';
 
 describe('StringMatcher', () => {
   it('should match string containing @user string', () => {
