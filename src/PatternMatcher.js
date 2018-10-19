@@ -10,7 +10,7 @@ class PatternMatcher {
     const expression = new RegExp(this.pattern);
     let found = expression.exec(input);
     if (found) {
-      return new Match(this.type, found);
+      return Match.fromRegExp(this.type, found);
     }
   }
 }

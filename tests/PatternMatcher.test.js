@@ -1,7 +1,7 @@
 import Match from '../src/Match';
 import PatternMatcher from '../src/PatternMatcher';
 
-describe('ExpressionMatcher', () => {
+describe('PatternMatcher', () => {
   it('should match string containing @user', () => {
     const matcher = new PatternMatcher('mention', /@\w+/);
     
