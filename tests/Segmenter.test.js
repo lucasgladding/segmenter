@@ -1,8 +1,9 @@
 import PatternMatcher from '../src/PatternMatcher';
 import Segment from '../src/Segment';
 import Segmenter from '../src/Segmenter';
+import StringMatcher from '../src/StringMatcher';
 
-describe('Segmenter', () => {
+describe('Segmenter with pattern matcher', () => {
   it('should segment input with user', () => {
     const segmenter = new Segmenter();
     segmenter.register(new PatternMatcher('mention', /@\w+/));
@@ -71,3 +72,20 @@ describe('Segmenter', () => {
     expect(segments[0].segment).toEqual('input without match');
   });
 });
+
+describe('Segmenter with string matcher', () => {
+  it('should segment input with user', () => {
+    const segmenter = new Segmenter();
+    segmenter.register(new StringMatcher('mention', '@user'));
+    
+    const segments = segmenter.segment('input with @user and more');
+
+    expect(segments).toBeInstanceOf(Array);
+    expect(segments.length).toEqual(3);
+
+    expect(segments[0].segment).toEqual('input with ');
+    expect(segments[1].segment).toEqual('@user');
+    expect(segments[2].segment).toEqual(' and more');
+  });
+});
+
