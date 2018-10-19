@@ -13,7 +13,7 @@ class Segmenter {
     if (!input) {
       return [];
     }
-    const match = this.match(input);
+    const match = this.find(input);
     if (match) {
       const l = input.slice(0, match.first);
       const r = input.slice(match.last);
@@ -26,7 +26,7 @@ class Segmenter {
     return [new Segment(null, input)];
   }
   
-  match(input) {
+  find(input) {
     for (let matcher of this.matchers) {
       const match = matcher.match(input);
       if (match) {
