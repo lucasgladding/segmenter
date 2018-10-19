@@ -1,5 +1,7 @@
-export { default as Match } from './Match';
-export { default as PatternMatcher } from './PatternMatcher';
-export { default as Segment } from './Segment';
-export { default as Segmenter } from './Segmenter';
-export { default as StringMatcher } from './StringMatcher';
+import Match from './Match';
+import PatternMatcher from './PatternMatcher';
+import Segment from './Segment';
+import Segmenter from './Segmenter';
+import StringMatcher from './StringMatcher';
+
+export { Match, PatternMatcher, Segment, Segmenter, StringMatcher };

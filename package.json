@@ -1,6 +1,6 @@
 {
   "name": "@lucasgladding/segmenter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Segments strings using matchers.",
   "main": "src/index.js",
   "directories": {
@@ -20,5 +20,6 @@
     "transform": {
       "^.+\\.js?$": "babel-jest"
     }
-  }
+  },
+  "dependencies": {}
 }

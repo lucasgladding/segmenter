@@ -1,3 +1,4 @@
+import * as SegmenterClass from '../src';
 import { PatternMatcher, Segment, Segmenter, StringMatcher } from '../src';
 
 describe('Segmenter with pattern matcher', () => {
