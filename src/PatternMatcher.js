@@ -1,4 +1,4 @@
-import Match from './Match';
+const Match = require('./Match');
 
 class PatternMatcher {
   constructor(type, pattern) {
@@ -15,4 +15,4 @@ class PatternMatcher {
   }
 }
 
-export default PatternMatcher;
+module.exports = PatternMatcher;

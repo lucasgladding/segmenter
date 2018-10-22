@@ -1,6 +1,6 @@
 {
   "name": "@lucasgladding/segmenter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Segments strings using matchers.",
   "main": "src/index.js",
   "directories": {

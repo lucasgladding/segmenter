@@ -5,4 +5,4 @@ class Segment {
   }
 }
 
-export default Segment;
+module.exports = Segment;

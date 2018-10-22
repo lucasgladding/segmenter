@@ -1,7 +1,7 @@
-import Match from './Match';
-import PatternMatcher from './PatternMatcher';
-import Segment from './Segment';
-import Segmenter from './Segmenter';
-import StringMatcher from './StringMatcher';
-
-export { Match, PatternMatcher, Segment, Segmenter, StringMatcher };
+module.exports = {
+  Match: require('./Match'),
+  PatternMatcher: require('./PatternMatcher'),
+  Segment: require('./Segment'),
+  Segmenter: require('./Segmenter'),
+  StringMatcher: require('./StringMatcher'),
+};

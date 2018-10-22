@@ -1,4 +1,4 @@
-import Segment from './Segment';
+const Segment = require('./Segment');
 
 class Segmenter {
   constructor() {
@@ -36,4 +36,4 @@ class Segmenter {
   }
 }
 
-export default Segmenter;
+module.exports = Segmenter;

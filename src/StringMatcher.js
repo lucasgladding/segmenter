@@ -1,4 +1,4 @@
-import Match from './Match';
+const Match = require('./Match');
 
 class StringMatcher {
   constructor(type, string) {
@@ -14,4 +14,4 @@ class StringMatcher {
   }
 }
 
-export default StringMatcher;
+module.exports = StringMatcher;
