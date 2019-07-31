@@ -4,4 +4,5 @@ module.exports = {
   Segment: require('./Segment'),
   Segmenter: require('./Segmenter'),
   StringMatcher: require('./StringMatcher'),
+  StringMatcherInsensitive: require('./StringMatcherInsensitive'),
 };
